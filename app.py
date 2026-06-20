@@ -28,7 +28,7 @@ def parse_guess(raw: str):
 
     return True, value, None
 
-
+# FIX ME: the hints are given backwards
 def check_guess(guess, secret):
     if guess == secret:
         return "Win", "🎉 Correct!"
@@ -45,7 +45,6 @@ def check_guess(guess, secret):
         if g > secret:
             return "Too High", "📈 Go HIGHER!"
         return "Too Low", "📉 Go LOWER!"
-
 
 def update_score(current_score: int, outcome: str, attempt_number: int):
     if outcome == "Win":
@@ -106,6 +105,7 @@ if "history" not in st.session_state:
 
 st.subheader("Make a guess")
 
+# FIX ME: the first line should be between the low and high values for the difficulty
 st.info(
     f"Guess a number between 1 and 100. "
     f"Attempts left: {attempt_limit - st.session_state.attempts}"
@@ -155,6 +155,7 @@ if submit:
     else:
         st.session_state.history.append(guess_int)
 
+# FIX ME: the secret should be an integer throughout the game
         if st.session_state.attempts % 2 == 0:
             secret = str(st.session_state.secret)
         else:
