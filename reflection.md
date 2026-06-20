@@ -40,11 +40,16 @@ The AI tool I used for this project was Claude. When I asked it to fix the oppos
   and what it showed you about your code.
 - Did AI help you design or understand any tests? How?
 
+To decide whether a bug was really fixed, I first ran the tests in test_game_logic.py to make sure that everything passed. I then ran the game myself, specicially checking and testing the bugs I had noticed at the very start, verifying that the bug was officially fixed. One test I ran manually was playing the whole game myself and resetting the game. I checked the secret number before-hand to make sure the hints it was giving me were correct, and also made sure to reset the game to make sure it reset properly. AI helped me edit and add new tests. In each chat where I fixed the bugs, I asked it to add a test checking this function to test_game_logic.py. It also edited some of the existing tests, since the wording was wrong, specifically the one testing wether the correct hints were given. 
+
 ---
 
 ## 4. What did you learn about Streamlit and state?
 
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
+
+A Stremlit "rerun" is when the code executes chronologically, starting from the top and going all the way to the bottom. This happens with ever interaction, like pressing a button or typing an input. A session state is all the memory needed for a browser sessions. It stops the stored information from completely resetting when a script or code is executed. This way, the session state is able to preserve data when a rerun happens. 
+
 
 ---
 
@@ -54,3 +59,5 @@ The AI tool I used for this project was Claude. When I asked it to fix the oppos
   - This could be a testing habit, a prompting strategy, or a way you used Git.
 - What is one thing you would do differently next time you work with AI on a coding task?
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+
+One habit or stratergy I want to reuse in future labs or projects is noting everywhere AI or I made an edit. I think it was useful for me to look back and see where the code and script was edited and who edited it. One thing I would do differently is ask it to make sure all the bugs were fixed before I went and tested it myself. Once, I asked it to fix a bug, and it only partially fixed it, and I had to ask it to debug again to find the other error in the code. I ended up testing the game twice, when I could have only done it once. This project has shown me all the errors that come with AI code. Its a useful tool, but it's not perfect and definitly needs someone with coding experience to debug and check the logic. With the devleopment of AI, I thought it would be a little better at this, but I was proven wrong. 

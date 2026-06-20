@@ -29,15 +29,22 @@ It wrote the code, ran away, and now the game is unplayable.
 - [ ] Detail which bugs you found.
 - [ ] Explain what fixes you applied.
 
+The game's purpose is to run a simple number guesssing game. It would choose a secret number, and the user had to guess the number within 8 tries. The game would also give you hints to either go higher or lower after each guess.
+
+I found a multitude of glitches. The hints would be backwards, telling you to go higher when you actually needed to go lower. The enter button would not work to submit the guess, and you would have to click the 'Submit Guess' button twice to give you the hint. The reset button would not work, and the final score would not show with the final message after winning the game. 
+
+There were many fixes I applied in the code using the AI agent. These ranged from fixing simple logic erros and typos to adding and reordering code so it implements in the correct sequence. I also refactored some functions from app.py to logic_utils.py and imported them. The AI agent also helped me create tests to test the functionality of the app properly.
+
 ## 📸 Demo Walkthrough
 
 Describe your fixed game in numbered steps so a reader can follow along without watching a video:
 
-1. <!-- Describe this step -->
-2. <!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
+1. User enters a value of '50'
+2. Game returns 'Go Lower!'
+3. User enters '25' --> 'Go Lower!'
+4. Usr enters '8'
+5. Game returns 'Correct!' with balloon animation and final score
+6. User resets game to play again
 
 **Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
 
