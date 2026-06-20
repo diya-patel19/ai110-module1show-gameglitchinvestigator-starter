@@ -8,15 +8,18 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 - List at least two concrete bugs you noticed at the start  
   (for example: "the hints were backwards").
 
+When I first ran the game, I was extremely confused because of all the bugs, and it was hard to properly play. The hints would be backward, so if I needed to go higher, it would tel me to go lower. The text box says "press enter", but pressing the key doesnt input the answer. The guesses also start from 0 and it doesnt let me reset and play again. The hints also didn't show until I clicked the "Submit Button" twice. It took me a couple tries of the game to understand where the code was bugging out, and decipher that what the game is supposed to do.
+
 **Bug Reproduction Log**
 
 Document at least 3 bugs you found. Add rows as needed.
 
-| Input | Expected Behavior | Actual Behavior | Console Output / Error |
-|-------|-------------------|-----------------|------------------------|
-| | | | |
-| | | | |
-| | | | |
+| Input        | Expected Behavior      | Actual Behavior              | Console Output / Error  |
+|--------------|------------------------|------------------------------|-------------------------|
+| Guess of 1   | Hint: Go higher        | Hint: Go lower               | None                    | 
+| New Game     | Resets game            | No response                  | None                    |
+| Submit Guess | Tells hint immediately | 2 clicks before showing hint | None                    |
+
 
 ---
 
@@ -25,6 +28,8 @@ Document at least 3 bugs you found. Add rows as needed.
 - Which AI tools did you use on this project (for example: ChatGPT, Gemini, Copilot)?
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
+
+The AI tool I used for this project was Claude. When I asked it to fix the opposite hints, it gave me only one of the ride sections of the code to fix, even though there were 2 errors that was creating the problem. After editing the first section, I ran it, and noticed that the hints were still backwards, so I went back to the AI and told it that the problem was still there. It then gave me the correct piece to fix. When I asked it to fix using the enter button, it gave me the right code and a lambda function that I could use so the enter button is fully functional. 
 
 ---
 
