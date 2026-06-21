@@ -31,7 +31,7 @@ def test_enter_key_submission():
     assert guess_int == 50
     assert err is None
 
-# FIXED: using agent, added a comprehensive to test hints to ensure they are corrent
+# FIXED: using agent, added a test to check hints and ensure they are correct
 def test_hint_messages_are_correct():
     # Test that "Too High" gives the "Go LOWER" hint
     outcome, message = check_guess(75, 50)
